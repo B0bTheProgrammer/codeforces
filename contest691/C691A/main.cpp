@@ -6,9 +6,9 @@ using namespace std;
 int main()
 {
 int n;
-char s;
+char s[50];
 cin >> s;
-n = atoi(&s);
+n = atoi(s);
 char a[n];
 for(int i=0;i < n;i++)
 {
