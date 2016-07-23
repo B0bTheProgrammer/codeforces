@@ -16,40 +16,30 @@ m['p'] = 3;m['q'] = 3;
 int l = s.length();
 for(int i = 0;i<=(l/2);i++)
 {
-   /* cout << s[i];
-    cout << s[l-i-1];*/
+   /*cout << s[i];
+    cout << s[l-i-1];
+cout << i;*/
 
 
     int k;
   if(s[i] == s[l-i-1]){
       k = m.find(s[i])->second;
-      if(k == 0)
+      if(k != 1)
       {
        cout << "NIE"; return 0;
-      }else{
-       //cout << "TAK";
       }
   }else{
     int k2 = m.find(s[l-i-1])->second;
     k = m.find(s[i])->second;
-    if((k2 == k)&&(k>1))
+    if(!((k2 == k)&&(k>1)))
     {
-      // cout << "TAK";
-    }else{
        cout << "NIE"; return 0;
     }
 
   }
  // cout << endl;
 }
-if(((l-1)%2) != 0)
-{
-  int k = m.find(s[(l/2)+1])->second;
-  cout << s[(l/2)+1];
-  if(k!=1){
-   cout << "NIE"; return 0;
-  }
-}
+
     cout << "TAK";
     return 0;
 }
